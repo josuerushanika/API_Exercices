@@ -21,46 +21,23 @@
 
 <script>
 
-// const myObj = {
-
-//   "people": [
-//     {"first":"Mike", "last":"Smith","age":30},
-//     {"first":"Jane", "last":"Doe","age":80},
-//     {"first":"Jane", "last":"Doe","age":80},
-//   ],
-//   "places": [
-//     {"location":"Toronto"},
-//     {"location":"New York"},
-//   ]
-// };
-
-// for(let x=0;x<myObj.people.length;x++){
-//   console.log(myObj.people[x]);
-//   console.log(myObj.people[x].first);
-// }
-
-// //loop through with forEach
-// myObj.people.forEach(function(person){
-//   console.log(person.first);
-//   //console.log(index);
-// })
-
-// const json = {first: "laurence",last:"svekis" ,count:0};
-// console.log(json);
-// const str = JSON.stringify(json);
-// console.log(str);
-// const json1 = JSON.parse(str);
-// console.log(json1);
-
-//The json stringify is a methode converts a javaScript object or a value to a JSON
-
+const output1 = document.querySelector('.output1');
+const output2 = document.querySelector('.output2');
 var xhr = new XMLHttpRequest();
 console.log(xhr.readyState);
-xhr.open('get','https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/');
 xhr.onreadystatechange = function(){
   console.log(xhr);
+  if(xhr.readyState===4){
+    console.log(xhr.responseText);
+    let temp = JSON.parse(xhr.responseText);
+    console.log(temp.people);
+    output1.textContent =`${temp.people[0].firstName}`;
+    output2.textContent =`${temp.people[0].lastName}`;
+
+  }
 }
-xhr.send();
+xhr.open('get','https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/');
+//xhr.send();
 </script>
 
 </html>
