@@ -45,14 +45,22 @@
 //   //console.log(index);
 // })
 
-const json = {first: "laurence",last:"svekis" ,count:0};
-console.log(json);
-const str = JSON.stringify(json);
-console.log(str);
-const json1 = JSON.parse(str);
-console.log(json1);
+// const json = {first: "laurence",last:"svekis" ,count:0};
+// console.log(json);
+// const str = JSON.stringify(json);
+// console.log(str);
+// const json1 = JSON.parse(str);
+// console.log(json1);
 
 //The json stringify is a methode converts a javaScript object or a value to a JSON
+
+var xhr = new XMLHttpRequest();
+console.log(xhr.readyState);
+xhr.open('get','https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/');
+xhr.onreadystatechange = function(){
+  console.log(xhr);
+}
+xhr.send();
 </script>
 
 </html>
