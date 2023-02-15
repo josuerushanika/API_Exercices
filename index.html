@@ -21,29 +21,36 @@
 
 <script>
 
-const myObj = {
+// const myObj = {
 
-  "people": [
-    {"first":"Mike", "last":"Smith","age":30},
-    {"first":"Jane", "last":"Doe","age":80},
-    {"first":"Jane", "last":"Doe","age":80},
-  ],
-  "places": [
-    {"location":"Toronto"},
-    {"location":"New York"},
-  ]
-};
+//   "people": [
+//     {"first":"Mike", "last":"Smith","age":30},
+//     {"first":"Jane", "last":"Doe","age":80},
+//     {"first":"Jane", "last":"Doe","age":80},
+//   ],
+//   "places": [
+//     {"location":"Toronto"},
+//     {"location":"New York"},
+//   ]
+// };
 
-for(let x=0;x<myObj.people.length;x++){
-  console.log(myObj.people[x]);
-  console.log(myObj.people[x].first);
-}
+// for(let x=0;x<myObj.people.length;x++){
+//   console.log(myObj.people[x]);
+//   console.log(myObj.people[x].first);
+// }
 
-//loop through with forEach
-myObj.people.forEach(function(person){
-  console.log(person.first);
-  //console.log(index);
-})
+// //loop through with forEach
+// myObj.people.forEach(function(person){
+//   console.log(person.first);
+//   //console.log(index);
+// })
+
+const json = {first: "laurence",last:"svekis" ,count:0};
+console.log(json);
+const str = JSON.stringify(json);
+console.log(str);
+
+//The json stringify is a methode converts a javaScript object or a value to a JSON
 </script>
 
 </html>
