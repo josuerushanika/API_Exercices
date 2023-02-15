@@ -20,11 +20,30 @@
 </body>
 
 <script>
-const cars = {"car":["blue","black"]};
-const cars1 = {"car1":{"color":"blue","model":"mustang"},"car2":{"color":"black"}};
-const cars2 = {"car1":{"color":"blue"},"car2":{"color":"black"}};
-let val = cars;
-console.log(val);
+
+const myObj = {
+
+  "people": [
+    {"first":"Mike", "last":"Smith","age":30},
+    {"first":"Jane", "last":"Doe","age":80},
+    {"first":"Jane", "last":"Doe","age":80},
+  ],
+  "places": [
+    {"location":"Toronto"},
+    {"location":"New York"},
+  ]
+};
+
+for(let x=0;x<myObj.people.length;x++){
+  console.log(myObj.people[x]);
+  console.log(myObj.people[x].first);
+}
+
+//loop through with forEach
+myObj.people.forEach(function(person){
+  console.log(person.first);
+  //console.log(index);
+})
 </script>
 
 </html>
